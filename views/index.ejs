@@ -5,14 +5,21 @@
     <%- include('partials/head.ejs') %>
   </head>
   <body>
-    <%- include('partials/navigation.ejs') %>
-    <header class="container vh-100 d-flex justify-content-center align-items-center">
-      <div class="container d-flex flex-column justify-content-center align-items-center">
-        <!-- <img src="/images/cuy.jpg" class="w-25" alt=""> -->
-        <h1 class="display-2 my-5 text-uppercase fw-bold">Node</h1>
-        <a href="/about" class="btn btn-primary w-25">About</a>
-      </div>
-    </header>
-    <%- include('partials/footer.ejs') %>
+    <section class="container">
+      <header><%- include('partials/navigation.ejs') %></header>
+      <section class="index">
+        <div>
+          <h1>Nodejs First App</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto
+            sunt doloremque est fugiat aut, consequatur labore molestias sequi
+            incidunt facere commodi suscipit, tenetur in voluptates natus
+            laudantium itaque ipsa distinctio.
+          </p>
+          <button><a href="/contact">Contact</a></button>
+        </div>
+      </section>
+      <%- include('partials/footer.ejs') %>
+    </section>
   </body>
 </html>

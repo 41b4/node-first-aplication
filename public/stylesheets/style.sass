@@ -1,10 +1,203 @@
-body
-  padding: 50px
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
-  background-color: #123453
-  color: whitesmoke
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: 'Nunito Sans', sans-serif
 
-a
-  color: #00B7FF
+$avocado: #88bf20
 
+.container
+  height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  header
+    padding: 2rem
+    .navbar
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      
+      h1
+        a
+          color: black
+          text-decoration: none
+      .nav-menu
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-evenly
+        width: 30%
+        li
+          list-style: none
+          a
+            color: black
+            text-decoration: none
+            &:hover
+              border-bottom: 1px solid black
+      .burga
+        display: none
+        cursor: pointer
+        span
+          width: 2rem
+          background-color: black
+          height: .2rem
+          margin: 4px
+          border-radius: 20%
+  .index
+    background: rgb(136,191,32)
+    background: linear-gradient(0deg, rgba(136,191,32,1) 0%, rgba(255,255,255,1) 40%)
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    div
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      width: 50%
+      h1
+        font-size: 40px
+        padding: 1rem
+      p
+        padding: 1rem
+      button
+        background: $avocado
+        padding: 1rem 1.5rem
+        border: none
+        border-radius: 30px
+        transition: .3s
+        &:hover
+            background: white
+            cursor: pointer
+            a
+              color: $avocado
+        a
+          text-decoration: none
+          color: white
+          font-weight: 600
+          font-size: 18px
+  .contact
+    background: rgb(136,191,32)
+    background: linear-gradient(0deg, rgba(136,191,32,1) 0%, rgba(255,255,255,1) 40%)
+    height: 100%
+    
+    display: flex
+    justify-content: right
+    align-items: center
+      
+    #node-mail
+      width: 100%
+      position: relative
+      right: 0
+      display: flex
+      justify-content: center
+      flex-direction: column
+      align-items: flex-end
+      padding: 4rem
+      height: 100%
+      h3
+        position: absolute
+        top: 15%
+        right: 25%
+        color: $avocado
+        font-weight: 800
+        font-size: 40px
+      form
+        background: $avocado
+        width: 50%
+        height: 70%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        border-radius: 15px
+        div
+          width: 80%
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: flex-start
+          label
+            color: white
+            font-weight: 600
+          textarea, input
+            resize: none
+            width: 100%
+            border: none
+            border-radius: 15px
+            outline: none
+            padding: .5rem
+        button
+          padding: .3rem .5rem
+          margin: 1rem
+          border: none
+          border-radius: 15px
+          outline: none
+          color: $avocado
+          transition: .3s
+          background: white
+          &:hover
+            cursor: pointer
+            background: $avocado
+            color: white
+
+
+          
+          
+
+  footer
+    background: $avocado
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 1rem
+    h3
+      font-size: 14px
+    div
+      width: 40%
+      display: flex
+      flex-direction: row
+      justify-content: space-around
+      padding: .5rem
+      a
+        text-decoration: none
+        color: black
+        font-size: 12px
+    hr
+      width: 95%
+      border: 1px solid black
+    p
+      padding: .5rem
+      font-size: 10px
+@media (max-width: 700px)
+  .burga
+    display: flex!important
+    flex-direction: column
+  .nav-menu
+    position: fixed
+    left: -100%
+    flex-direction: column!important
+    width: 100%!important
+    height: 100vh
+    transition: .3s
+    .nav-item
+      .nav-link
+        color: white!important
+  .nav-menu.active
+    left: 0!important
+    top: 0!important
+    z-index: 1
+    background-color: black
+  .index
+    div
+      width: 90%!important
+  .contact
+    #node-mail
+      form
+        width: 100%!important
 
